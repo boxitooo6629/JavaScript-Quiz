@@ -32,7 +32,7 @@ let questionsTag = document.getElementById("questions");
 
 
 function quizEnd(){
-    debugger;
+    
     clearInterval(timerID);
 
     let endScreenElement = document.getElementById("end-screen");
@@ -76,11 +76,11 @@ function questionClick() {
     }, 1000);
 
     currentQuestionIndex++;
-      debugger;
+      
     if(currentQuestionIndex === 5) {
-        debugger;
+        
         quizEnd()
-    } else { debugger;
+    } else { 
         getQuestion();
     }
 }
@@ -116,7 +116,7 @@ function startQuiz() {
         
     let startScreenElement = document.getElementById("start-screen");
         startScreenElement.setAttribute("class", "hide");
-         debugger;
+         
         questionsTag.removeAttribute("class");
 
         timerID = setInterval(clockTick, 1000);
@@ -130,7 +130,7 @@ startButton.addEventListener('click', startQuiz)
 
 function highScore() {
     let initials = initialElement.value.trim();
-    debugger;
+
     if(initials !== ""){
         let highScores = JSON.parse(localStorage.getItem("highscores")) || [] ;
 
@@ -149,7 +149,7 @@ function highScore() {
 
 function checkForEnter(event){
     if(event.key === "Enter") {
-        saveHighScore();
+        highScore();
 
     }
 }
