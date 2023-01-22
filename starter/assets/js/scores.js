@@ -18,8 +18,10 @@ function highScore() {
 
 
 
-function removeHighScore() {
-
+function removeHighScore() { 
+    localStorage.removeItem("highscores"); 
+    let ol = document.getElementById("highscores");
+    ol.appendChild(li);
 }
 
 let clearButton = document.getElementById("clear");

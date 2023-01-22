@@ -129,21 +129,20 @@ startButton.addEventListener('click', startQuiz)
 
 
 function highScore() {
+    
     let initials = initialElement.value.trim();
+    let highScores = JSON.parse(localStorage.getItem("highscores")) || [] ;
 
     if(initials !== ""){
-        let highScores = JSON.parse(localStorage.getItem("highscores")) || [] ;
-
-        let newScore ={
+        let newScore = {
             score: time,
             initials: initials
         }
-
+        highScores.push(newScore);
+        localStorage.setItem("highscores", JSON.stringify(highScores));
     }
-    highScore.push(newScore);
-    localStorage.setItem("highscore", JSON.stringify(highScore));
-
-    window.location.href = "highscore.html";
+    
+    window.location.href = "highscores.html";
 
 }
 
