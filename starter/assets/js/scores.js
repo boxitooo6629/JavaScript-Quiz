@@ -20,8 +20,8 @@ function highScore() {
 
 function removeHighScore() { 
     localStorage.removeItem("highscores"); 
-    let ol = document.getElementById("highscores");
-    ol.appendChild(li);
+    let scores = document.getElementById("highscores");
+    scores.innerHTML=""
 }
 
 let clearButton = document.getElementById("clear");
