@@ -15,9 +15,9 @@ let initialElement = document.getElementById("initials");
 
 let feedBackElement = document.getElementById("feedback");
 
-let sfxCorrect = new Audio("assets/sfx/correct.wav");
+let sfxCorrect = new Audio("correct.wav");
 
-let sfxIncorrect = new Audio("assets/sfx/incorrect.wav");
+let sfxIncorrect = new Audio("incorrect.wav");
 
 
  
